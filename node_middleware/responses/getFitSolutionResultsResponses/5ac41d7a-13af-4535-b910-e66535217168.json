@@ -1,0 +1,11 @@
+{
+  "progress": {
+    "state": "COMPLETED",
+    "status": "Job completed",
+    "start": { "seconds": "1545628670", "nanos": 941670000 },
+    "end": { "seconds": "1545628670", "nanos": 941685000 }
+  },
+  "steps": [],
+  "exposed_outputs": {},
+  "fitted_solution_id": "646c91bc-a46a-419e-8718-1a0061cb53c9"
+}

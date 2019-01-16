@@ -1,0 +1,21 @@
+{
+  "progress": {
+    "state": "COMPLETED",
+    "status": "Job completed",
+    "start": { "seconds": "1545628699", "nanos": 965246000 },
+    "end": { "seconds": "1545628699", "nanos": 965261000 }
+  },
+  "steps": [],
+  "exposed_outputs": {
+    "steps.6.produce": {
+      "value": "csv_uri",
+      "error": null,
+      "raw": null,
+      "dataset_uri": "",
+      "csv_uri": "file:///output/temp/predictions/88da831d-2e1b-495b-a9e7-92db69051d46/0c44eaad-815c-40d1-ba61-1b536351e8a5/steps.6.produce.csv",
+      "pickle_uri": "",
+      "pickle_blob": { "type": "Buffer", "data": [] },
+      "plasma_id": { "type": "Buffer", "data": [] }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "progress": {
+    "state": "RUNNING",
+    "status": "Running more pipelines",
+    "start": { "seconds": "1545628514", "nanos": 896395000 },
+    "end": { "seconds": "1545628514", "nanos": 896439000 }
+  },
+  "done_ticks": 7,
+  "all_ticks": 10,
+  "solution_id": "54116566-a868-4abc-b939-d6860dcce755",
+  "internal_score": 93.75,
+  "scores": [
+    {
+      "scoring_configuration": {
+        "method": "K_FOLD",
+        "folds": 0,
+        "train_test_ratio": 0,
+        "shuffle": false,
+        "random_seed": 0,
+        "stratified": false
+      },
+      "scores": [
+        {
+          "metric": { "metric": "F1_MACRO", "k": 0, "pos_label": "" },
+          "fold": 0,
+          "targets": [
+            {
+              "target_index": 0,
+              "resource_id": "0",
+              "column_index": 18,
+              "column_name": "Hall_of_Fame",
+              "clusters_number": 0
+            }
+          ],
+          "value": {
+            "value": "raw",
+            "error": null,
+            "raw": {
+              "raw": "double",
+              "null": "NULL_VALUE",
+              "double": 0.26803797468354423,
+              "int64": "0",
+              "bool": false,
+              "string": "",
+              "bytes": { "type": "Buffer", "data": [] },
+              "list": null,
+              "dict": null
+            },
+            "dataset_uri": "",
+            "csv_uri": "",
+            "pickle_uri": "",
+            "pickle_blob": { "type": "Buffer", "data": [] },
+            "plasma_id": { "type": "Buffer", "data": [] }
+          }
+        }
+      ]
+    }
+  ]
+}

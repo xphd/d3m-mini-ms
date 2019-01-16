@@ -1,0 +1,43 @@
+{
+  "progress": {
+    "state": "COMPLETED",
+    "status": "Scoring Solution Completed",
+    "start": { "seconds": "1545628594", "nanos": 775537000 },
+    "end": { "seconds": "1545628594", "nanos": 775572000 }
+  },
+  "scores": [
+    {
+      "metric": { "metric": "F1_MACRO", "k": 0, "pos_label": "" },
+      "fold": 0,
+      "targets": [
+        {
+          "target_index": 0,
+          "resource_id": "0",
+          "column_index": 18,
+          "column_name": "Hall_of_Fame",
+          "clusters_number": 0
+        }
+      ],
+      "value": {
+        "value": "raw",
+        "error": null,
+        "raw": {
+          "raw": "double",
+          "null": "NULL_VALUE",
+          "double": 0.318554664038694,
+          "int64": "0",
+          "bool": false,
+          "string": "",
+          "bytes": { "type": "Buffer", "data": [] },
+          "list": null,
+          "dict": null
+        },
+        "dataset_uri": "",
+        "csv_uri": "",
+        "pickle_uri": "",
+        "pickle_blob": { "type": "Buffer", "data": [] },
+        "plasma_id": { "type": "Buffer", "data": [] }
+      }
+    }
+  ]
+}

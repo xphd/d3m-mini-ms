@@ -1,0 +1,6 @@
+{
+  "user_agent": "TAMU-UW.6.3_pre",
+  "version": "2018.7.8_pre",
+  "allowed_value_types": ["DATASET_URI", "CSV_URI"],
+  "supported_extensions": []
+}
