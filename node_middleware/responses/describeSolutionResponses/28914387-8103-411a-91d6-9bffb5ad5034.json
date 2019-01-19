@@ -1,1 +1,45 @@
-{"pipeline":{"id":"35653239-f3f4-4953-867b-41b691380c38","source":null,"created":{"seconds":"1527811200","nanos":0},"context":"PRODUCTION","name":"35653239-f3f4-4953-867b-41b691380c38","description":"","users":[],"inputs":[{"name":"inputs"}],"outputs":[{"name":"produce","data":"steps.0.produce"}],"steps":[{"step":"primitive","primitive":{"primitive":{"id":"c1c54b03-717d-4e6b-b043-8fc93364b92e","version":"0.0.2","python_path":"d3m.primitives.mit_primitives.Learner","name":"Learner","digest":"e0898ba9859815cc847540a6b528c8ebf27064ea7c425b50e50e1c9e86b98514"},"arguments":{"inputs":{"argument":"container","container":{"data":"inputs.0"},"data":null},"outputs":{"argument":"container","container":{"data":"inputs.0"},"data":null}},"outputs":[{"id":"produce"}],"hyperparams":{},"users":[]},"pipeline":null,"placeholder":null}]},"steps":[]}
+{
+  "pipeline": {
+    "id": "35653239-f3f4-4953-867b-41b691380c38",
+    "source": null,
+    "created": { "seconds": "1527811200", "nanos": 0 },
+    "context": "PRODUCTION",
+    "name": "35653239-f3f4-4953-867b-41b691380c38",
+    "description": "",
+    "users": [],
+    "inputs": [{ "name": "inputs" }],
+    "outputs": [{ "name": "produce", "data": "steps.0.produce" }],
+    "steps": [
+      {
+        "step": "primitive",
+        "primitive": {
+          "primitive": {
+            "id": "c1c54b03-717d-4e6b-b043-8fc93364b92e",
+            "version": "0.0.2",
+            "python_path": "d3m.primitives.mit_primitives.Learner",
+            "name": "Learner",
+            "digest": "e0898ba9859815cc847540a6b528c8ebf27064ea7c425b50e50e1c9e86b98514"
+          },
+          "arguments": {
+            "inputs": {
+              "argument": "container",
+              "container": { "data": "inputs.0" },
+              "data": null
+            },
+            "outputs": {
+              "argument": "container",
+              "container": { "data": "inputs.0" },
+              "data": null
+            }
+          },
+          "outputs": [{ "id": "produce" }],
+          "hyperparams": {},
+          "users": []
+        },
+        "pipeline": null,
+        "placeholder": null
+      }
+    ]
+  },
+  "steps": []
+}

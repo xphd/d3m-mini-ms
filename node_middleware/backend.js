@@ -36,6 +36,23 @@ serverSocket.on("connection", socket => {
       });
   });
 
+  // model selection
+  socket.on("requestSolutions", () => {
+    console.log("Server: requestSolutions received");
+    let solutions = getAllSolutions();
+    // get pipelineSize
+    let describeSolutionPath = "./responses/describeSolutionResponses/";
+    solutions.forEach(solution => {
+      let id = solution.solutionID;
+      let filename = describeSolutionPath + id + ".json";
+      let tempObj = fs.readFileSync(filename, "utf-8");
+      let size = JSON.parse(tempObj).pipeline.steps.length;
+      solution.pipelineSize = size;
+    });
+
+    socket.emit("responseSolutions", solutions);
+  });
+
   // socket.on("helloSearch", () => {
   //   grpcClientWrapper.connect(TA2PORT);
   //   grpcClientWrapper.helloLoop().then(grpcClientWrapper.searchSolutions);
@@ -62,23 +79,6 @@ serverSocket.on("connection", socket => {
   socket.on("describeSolutions", solutionIDs_selected => {
     console.log("describeSolutions");
     grpcClientWrapper.getDescription(solutionIDs_selected);
-  });
-
-  // model selection
-  socket.on("requestSolutions", () => {
-    console.log("Server: requestSolutions received");
-    let solutions = getAllSolutions();
-    // get pipelineSize
-    let describeSolutionPath = "./responses/describeSolutionResponses/";
-    solutions.forEach(solution => {
-      let id = solution.solutionID;
-      let filename = describeSolutionPath + id + ".json";
-      let tempObj = fs.readFileSync(filename, "utf-8");
-      let size = JSON.parse(tempObj).pipeline.steps.length;
-      solution.pipelineSize = size;
-    });
-
-    socket.emit("responseSolutions", solutions);
   });
 
   socket.on("requestPipeline", solutionID => {
