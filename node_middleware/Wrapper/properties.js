@@ -11,7 +11,11 @@ const properties = {
 
     ta2Ident: null,
     connected: false,
-    solutions: new Map(),
+    solutions: [
+      { solutionID: "59d775a3-8380-4dea-a447-c0789b760775", scores: {} },
+      { solutionID: "28914387-8103-411a-91d6-9bffb5ad5034", scores: {} }
+    ],
+    // solutions: new Map(),
     //produceSolutionRequests: [],
     //solutionResults: [],
     // NIST eval plan: only ranks 1-20 are considered (lower is better)

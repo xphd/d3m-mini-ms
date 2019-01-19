@@ -39,7 +39,12 @@ serverSocket.on("connection", socket => {
   // model selection
   socket.on("requestSolutions", () => {
     console.log("Server: requestSolutions received");
-    let solutions = getAllSolutions();
+    // let solutions = getAllSolutions();
+    let solutions = [
+      { solutionID: "", scores: {} },
+      { solutionID: "", scores: {} },
+      { solutionID: "", scores: {} }
+    ];
     // get pipelineSize
     let describeSolutionPath = "./responses/describeSolutionResponses/";
     solutions.forEach(solution => {
