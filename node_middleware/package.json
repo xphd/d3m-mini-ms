@@ -19,7 +19,8 @@
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
     "papaparse": "^4.6.1",
-    "shelljs": "^0.8.2"
+    "shelljs": "^0.8.2",
+    "socketio": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"

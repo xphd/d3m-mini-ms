@@ -67,31 +67,11 @@ serverSocket.on("connection", socket => {
   // model selection
   socket.on("requestSolutions", () => {
     console.log("Server: requestSolutions received");
-
-    // get score(s)
-    // let scoreSolutionPath = "./responses/scoreSolutionResponses/";
-    // let getScoreSolutionPath = "./responses/getScoreSolutionResultsResponses/";
-    // solutions.forEach(solution => {
-    //   let id = solution.id;
-    //   let filename1 = scoreSolutionPath + id + ".json";
-    //   let tempObj = fs.readFileSync(filename1, "utf-8");
-
-    //   let request_id = JSON.parse(tempObj).request_id;
-    //   let filename2 = getScoreSolutionPath + request_id + ".json";
-    //   let tempObj2 = fs.readFileSync(filename2, "utf-8");
-
-    //   // hardcode at this moment
-    //   let score = JSON.parse(tempObj2).scores[0].value.raw.double;
-
-    //   solution.score = score;
-    // });
-
     let solutions = getAllSolutions();
-
     // get pipelineSize
     let describeSolutionPath = "./responses/describeSolutionResponses/";
     solutions.forEach(solution => {
-      let id = solution.id;
+      let id = solution.solutionID;
       let filename = describeSolutionPath + id + ".json";
       let tempObj = fs.readFileSync(filename, "utf-8");
       let size = JSON.parse(tempObj).pipeline.steps.length;
@@ -101,10 +81,10 @@ serverSocket.on("connection", socket => {
     socket.emit("responseSolutions", solutions);
   });
 
-  socket.on("requestPipeline", solutionId => {
-    console.log("Server: requestPipeline, id:", solutionId);
+  socket.on("requestPipeline", solutionID => {
+    console.log("Server: requestPipeline, id:", solutionID);
     let pipelinePath = "./responses/describeSolutionResponses/";
-    let filename = pipelinePath + solutionId + ".json";
+    let filename = pipelinePath + solutionID + ".json";
     let pipelineStr = fs.readFileSync(filename, "utf8");
     let pipelineStrJSON = JSON.parse(pipelineStr);
     let pipeline = pipelineStrJSON["pipeline"];

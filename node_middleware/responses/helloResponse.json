@@ -1,6 +1,1 @@
-{
-  "user_agent": "TAMU-UW.6.3_pre",
-  "version": "2018.7.8_pre",
-  "allowed_value_types": ["DATASET_URI", "CSV_URI"],
-  "supported_extensions": []
-}
+{"user_agent":"MIT-FL-TA2","version":"2018.7.7","allowed_value_types":["DATASET_URI","CSV_URI"],"supported_extensions":[]}
